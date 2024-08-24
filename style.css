@@ -1,0 +1,67 @@
+:root{
+    --black: #000000;
+    --white: #ffffff;
+    --light-grey: #f4f4f4;
+    --moderate-grey: #262626;
+    --grey: #161616;
+    --font-family: "Raleway", sans-serif;
+}
+
+body{
+    font-family: var(--font-family);
+}
+
+.main{
+    background: var(--light-grey);
+}
+
+h1{
+    font-weight: 700;
+    padding: 0px;
+    margin: 0px;
+}
+
+.sidebar{
+    height: 100vh;
+    background: var(--moderate-grey);
+
+    .nav-link{
+        color: var(--light-grey);
+
+        &:hover{
+            background: var(--black);
+        }
+    }
+
+    .nav-link.active{
+        background: var(--black);
+    }
+
+    @media screen and (width <= 768px) {
+        height: auto;
+    }
+}
+
+.grey-divider{
+    background: var(--moderate-grey);
+    height: 4px;
+    opacity: 0.15;
+}
+
+.btn-primary{
+    border: none !important;
+    border-radius: 0px !important;
+    border-bottom: 2px solid var(--moderate-grey) !important;
+    background: var(--light-grey);
+    color: var(--moderate-grey);
+    transition: 0.3s all;
+    &:hover{
+        background: var(--moderate-grey);
+        color: var(--light-grey);
+    }
+}
+
+.card{
+    border: none !important;
+    border-radius: 0px;
+}
