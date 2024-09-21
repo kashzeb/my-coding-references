@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: #222222;
+    font-size: 14px;
+    align-items: center;
+
+    @media screen and (width<=768px) {
+        font-size: 12px;
+    }
+}
+  h1{
+    color: #ffffff;
+    font-size: 1rem;
+    margin-bottom: 16px;
+  }
+
+  p{
+    color: #e9e5e5;
+    font-size: 0.75rem;
+  }
+  .card{
+    margin: 0 auto;
+    padding: 1rem;
+    width: 250px;
+    background: #222222;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+  }
+  
+  @property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+  
+  .card::after, .card::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /* this line to animate multiple color  */
+    background-image: conic-gradient(from var(--angle), #da1ebe, #22e99a, #d225be, #cc1919, #b95f23); 
+
+    /* this line to animate only one color */
+    /* background-image: conic-gradient(from var(--angle), transparent 10%, #1eda21); */
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    border-radius: 10px;
+    animation: 3s spin linear infinite;
+  }
+  .card::before{
+    filter: blur(1.5rem);
+    opacity: 0.5;
+  }
+  @keyframes spin{
+    from{
+      --angle: 0deg;
+    }
+    to{
+      --angle: 360deg;
+    }
+  }
