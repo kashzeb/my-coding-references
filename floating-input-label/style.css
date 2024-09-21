@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #222222;
+}
+
+.input-field{
+    position: relative;
+}
+
+.input-field input{
+    width: 350px;
+    height: 60px;
+    border-radius: 6px;
+    font-size: 18px;
+    padding: 0 15px;
+    border: 2px solid #fff;
+    background: transparent;
+    outline: none;
+    color: #fff;
+}
+
+.input-field label{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 19px;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+input:focus{
+    border: 2px solid greenyellow;
+}
+
+input:focus ~ label,
+input:valid ~ label{
+    top: 0;
+    font-size: 16px;
+    padding: 0 10px;
+    background: #222222;
+}
+
+/* below code snippet is to overwrite the autofill style of an input field. same can be used for select and textarea  */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus{
+    border: 2px solid greenyellow;
+    -webkit-text-fill-color: #ffffff;
+    /* -webkit-box-shadow: 0 0 0px 1000px #000 inset; */
+    transition: background-color 5000s ease-in-out 0s;
+}

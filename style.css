@@ -5,7 +5,11 @@
     --moderate-grey: #262626;
     --grey: #161616;
     --font-family: "Raleway", sans-serif;
+    @media screen and (width<=820px) {
+        --bs-body-font-size: 0.875rem
+    }
 }
+
 
 body{
     font-family: var(--font-family);
@@ -64,4 +68,9 @@ h1{
 .card{
     border: none !important;
     border-radius: 0px;
+}
+.card-body{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
