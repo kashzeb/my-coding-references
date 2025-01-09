@@ -5,6 +5,34 @@ body{
     font-style: normal;
 }
 
+p, div, span, label{
+    font-family: "Outfit", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+}
+
+button{
+    background: #5C6B39;
+    color: #ffffff;
+    padding: 10px 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px !important;
+    line-height: 100% !important;
+    font-weight: 400 !important;
+    border: none;
+    box-shadow: none;
+    transition: 500ms all;
+    border-radius: 4px !important;
+}
+button:hover{
+    background: #000000;
+}
+
 .offcanvas-end{
     transition: 1s all;
 }
@@ -172,24 +200,6 @@ body{
             color: #000000;
             font-size: 16px;
         }
-        button{
-            background: #5C6B39;
-            color: #ffffff;
-            padding: 10px 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            text-align: center;
-            font-size: 14px;
-            line-height: 100%;
-            border: none;
-            box-shadow: none;
-            transition: 500ms all;
-        }
-        button:hover{
-            background: #000000;
-        }
     }
 
     .package-wrapper:hover{
@@ -203,6 +213,202 @@ body{
         }
         button{
             background: #000000;
+        }
+    }
+}
+
+.slider-section{
+    height: calc(100vh - 100px);
+
+    h1{
+        font-size: 4rem;
+        color: #ffffff;
+        font-family: "Philosopher", serif;
+        font-weight: 700;
+        font-style: normal;
+        margin-top: 60px;
+    }
+
+    .slide-1{
+        .slider-content-wrapper{
+            background: url('img/hero-img.png') center center no-repeat;
+        }
+    }
+    .slide-2{
+        .slider-content-wrapper{
+            background: #000000;
+        }
+    }
+    .slide-3{
+        .slider-content-wrapper{
+            background: #5C6B39;
+        }
+    }
+    .slide-4{
+        .slider-content-wrapper{
+            background: #000000;
+        }
+    }
+    .slide-5{
+        .slider-content-wrapper{
+            background: #5C6B39;
+        }
+    }
+
+    .slider-content-wrapper{
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 60px 0px;
+        height: 100%;
+        width: 100%;
+
+        span{
+            font-size: 16px;
+            color: #ffffff;
+        }
+    }
+
+    
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .autoplay-progress {
+      position: absolute;
+      right: 16px;
+      bottom: 16px;
+      z-index: 10;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: #ffffff;
+      opacity: 0.3;
+    }
+
+    .autoplay-progress svg {
+      --progress: 0;
+      position: absolute;
+      left: 0;
+      top: 0px;
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      stroke-width: 4px;
+      stroke: #ffffff;
+      opacity: 0.5;
+      fill: none;
+      stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+      stroke-dasharray: 125.6;
+      transform: rotate(-90deg);
+    }
+}
+
+.about-us-section{
+    background: url('img/map.png') center center no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 60px 0px;
+
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+h2{
+    font-family: "Philosopher", serif;
+    font-size: 24px !important;
+    color: #000000 !important;
+    font-weight: 700 !important;
+    margin-bottom: 16px;
+    position: relative;
+}
+h2::after{
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 16px;
+    height: 2px;
+    background: #5C6B39;
+}
+
+.packages-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 60px 0px;  
+    background: #edf0e53b;
+}
+
+.package-card{
+    position: relative;
+    background: #ffffff;
+    box-shadow: 0px 0px 18px -15px #000000;
+
+    .package-img{
+        overflow: hidden;
+        img{
+            width: 100%;
+            object-fit: cover;
+            
+        }
+    }
+
+    .package-title{
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 100%;
+        color: #5C6B39;
+        margin-bottom: 12px;
+        margin-top: 16px;
+        padding: 0px 16px;
+    }
+    .package-description{
+        font-size: 14px;
+        color: #000000;
+        margin-bottom: 12px;
+        padding: 0px 16px;
+    }
+    button{
+        margin: 0px 16px 16px;
+    }
+}
+
+.package-card:hover{
+    .package-img{
+        img{
+            transform: scale(1.1);
+            opacity: 0.9;
+            transition: 1s all;
         }
     }
 }

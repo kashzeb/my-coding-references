@@ -47,4 +47,15 @@
             }
         }
     }
+
+    .slider-section{
+        height: calc(100vh - 85px);
+        padding: 0px;
+        
+        h1{
+            font-size: 2rem;
+            margin-top: 0px;
+            width: 100%;
+        }
+    }
 }
