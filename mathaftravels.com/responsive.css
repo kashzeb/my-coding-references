@@ -52,10 +52,32 @@
         height: calc(100vh - 85px);
         padding: 0px;
         
+        .slider-content-wrapper{
+            justify-content: flex-start !important;
+
+            button, a.my-button{
+                position: absolute;
+                bottom: 20px;
+                left: 50%;
+                transform: translate(-50%, -50px);
+                width: 90%;
+            }
+        }
+        
         h1{
-            font-size: 2rem;
+            font-size: 1.5rem;
             margin-top: 0px;
             width: 100%;
+            background: rgb(0, 0, 0, 0.4);
+            text-align: center !important;
+            padding: 12px;
+            color: #ffffff;
         }
+
+        /* .slide-3{
+            .slider-content-wrapper{
+                background: url('img/umrah-services.jpeg') center center no-repeat;
+            }
+        } */
     }
 }
