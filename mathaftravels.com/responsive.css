@@ -80,4 +80,10 @@
             }
         } */
     }
+
+    .pricing{
+        span{
+            font-size: 1.3rem;
+        }
+    }
 }
