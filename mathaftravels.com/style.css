@@ -13,11 +13,21 @@ p, div, span, label{
     font-size: 14px;
 }
 
+a{
+    text-decoration: none !important;
+}
+
+ul {
+    margin: 0px !important;
+    padding: 0px !important;
+    list-style: none !important;
+}
+
 .color-white{
     color: #ffffff;
 }
 .color-black{
-    color: #000000;
+    color: #100C08;
 }
 .color-green{
     color: #5C6B39;
@@ -41,7 +51,7 @@ button, a.my-button{
     text-decoration: none;
 }
 button:hover, a.my-button:hover{
-    background: #000000;
+    background: #100C08;
     cursor: pointer;
 }
 
@@ -66,7 +76,7 @@ button:hover, a.my-button:hover{
             .nav-link{
                 font-size: 14px;
                 line-height: 110%;
-                color: #000000;
+                color: #100C08;
                 background: #ffffff;
                 padding: 10px 14px;
                 transition: 300ms all;
@@ -207,7 +217,7 @@ button:hover, a.my-button:hover{
         background: #ffffff;
         border-radius: 2px;
         padding: 16px;
-        box-shadow: 0px 0px 10px #000000;
+        box-shadow: 0px 0px 10px #100C08;
         min-height: 165px;
         display: flex;
         align-items: flex-start;
@@ -223,11 +233,11 @@ button:hover, a.my-button:hover{
         }
 
         h2{
-            color: #000000;
+            color: #100C08;
             font-size: 22px;
         }
         p{
-            color: #000000;
+            color: #100C08;
             font-size: 16px;
         }
     }
@@ -242,7 +252,7 @@ button:hover, a.my-button:hover{
             color: #ffffff;
         }
         button{
-            background: #000000;
+            background: #100C08;
         }
     }
 }
@@ -372,7 +382,7 @@ button:hover, a.my-button:hover{
 h2{
     font-family: "Philosopher", serif;
     font-size: 24px !important;
-    color: #000000 !important;
+    color: #100C08 !important;
     font-weight: 700 !important;
     margin-bottom: 16px;
     position: relative;
@@ -399,7 +409,7 @@ h2::after{
 .package-card{
     position: relative;
     background: #ffffff;
-    box-shadow: 0px 0px 18px -15px #000000;
+    box-shadow: 0px 0px 18px -15px #100C08;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -427,7 +437,7 @@ h2::after{
     }
     .package-description{
         font-size: 14px;
-        color: #000000;
+        color: #100C08;
         margin-bottom: 12px;
         padding: 0px 16px;
     }
@@ -456,7 +466,7 @@ h2::after{
 
     span{
         font-size: 1.5rem;
-        color: #000000;
+        color: #100C08;
         line-height: 100%;
     }
 }
@@ -478,3 +488,424 @@ details > summary {
   details > summary::-webkit-details-marker {
     display: none;
   }
+
+  .tour-packages-section{
+    background-image: url('img/tour-packages-section-bg.png'), linear-gradient(180deg, #1d231f 0%, #1d231f 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 100px 0;
+
+    h2{
+        color: #ffffff !important;
+        margin-bottom: 32px;
+    }
+    h2::after{
+        background: #ffffff
+    }
+
+    .package-card{
+        border-radius: 5px;
+        background-color: #ffffff;
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.08);
+        position: relative;
+        overflow: hidden;
+        transition: 1s all;
+    }
+    .package-card-img{
+        position: relative;
+        display: block;
+        overflow: hidden;
+        border-radius: 5px 5px 0 0;
+        transition: all 0.5s ease-out;
+        height: 250px;
+
+        img{
+            width: 100%;
+            object-fit: cover;
+            height: 100%;
+        }
+    }
+
+    .package-card:hover img{
+        transform: scale(1.1);
+        opacity: 0.9;
+        transition: 1s all;
+    }
+
+    .batch{
+        position: absolute;
+        top: 20px;
+        left: -38px;
+        transform: rotate(-50deg);
+        z-index: 1;
+
+        span{
+            text-align: center;
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 1;
+            letter-spacing: 0.3px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 140px;
+            padding: 6px 10px;
+        }
+    }
+
+    .batch.popular{
+        span{
+            color: #100C08;
+            background-color: #FBB03B;
+        }
+    }
+
+    .batch.trending{
+        span{
+            color: #ffffff;
+            background-color: #63AB45;
+        }
+    }
+
+
+    .package-card-content{
+        .card-content-top{
+            padding: 14px;
+
+            h5{
+                margin-bottom: 15px;
+                transition: 0.5s;
+
+                a{
+                    color: #100C08;
+                    font-size: 22px;
+                    font-weight: 500;
+                    line-height: 1.4;
+                    text-transform: capitalize;
+                    transition: 0.5s;
+                    text-decoration: none;
+                }
+            }
+            h5:hover{
+                a{
+                    color: #5C6B39;
+                }
+            }
+
+            .feature-list{
+                display: flex;
+                align-items: center;
+                gap: 30px;
+                line-height: 1;
+                padding: 0px;
+
+                li{
+                    color: rgba(16, 12, 8, 0.5);
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 1;
+                    text-transform: capitalize;
+
+                    svg{
+                        fill: rgba(16, 12, 8, 0.5);
+                    }
+                }
+            }
+        }
+    }
+    
+    .card-content-bottom{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+        padding: 20px 14px;
+        border-top: 1px solid rgba(34, 34, 34, 0.2);
+
+        .price-area{
+            line-height: 1;
+
+            .title{
+                color: #100C08;
+                font-size: 13px;
+                font-weight: 500;
+                line-height: 1;
+                letter-spacing: 0.26px;
+                text-transform: capitalize;
+                display: inline-block;
+                margin-bottom: 5px;
+            }
+            h6{
+                color: #5C6B39;
+                font-size: 22px;
+                font-weight: 800;
+                line-height: 1;
+                text-transform: capitalize;
+                margin-bottom: 0;
+                sub{
+                    bottom: 0;
+                }
+            }
+
+            span{
+                color: #100C08;
+                font-size: 11px;
+                font-weight: 400;
+                line-height: 1;
+                letter-spacing: 0.22px;
+                text-transform: capitalize;
+            }
+        }
+    }
+  }
+
+  .why-us-section{
+    padding: 60px 0;
+
+    h2{
+        margin-bottom: 32px;
+    }
+    
+    .feature-card{
+        padding: 14px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        border-radius: 10px;
+        transition: 0.5s;
+        background-color: #ffffff;
+        box-shadow: 0px 0px 20px -2px rgba(0, 0, 0, 0.08);
+        border: 1px solid #ffffff;
+    }
+
+    .feature-card:hover{
+        background: #edf0e599;
+        border: 1px solid #e7e7e7;
+    }
+
+    .feature-card .feature-card-icon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.5s;
+    }
+
+    .feature-card .feature-card-icon svg{
+        fill: #63AB45;
+        transition: 0.5s;
+    }
+
+    .feature-card .feature-card-content h6{
+        color: #100C08;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.4;
+        letter-spacing: 0.6px;
+        text-transform: capitalize;
+        margin-bottom: 6px;
+        transition: 0.5s;
+        text-align: center;
+    }
+
+    .feature-card .feature-card-content p{
+        color: #100C08;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 1.2;
+        letter-spacing: 0.45px;
+        margin-bottom: 0;
+        transition: 0.5s;
+        text-align: center;
+    }
+
+    .activities-counter{
+        padding: 40px 0;
+        border-bottom: 1px solid rgba(16, 12, 8, 0.1);
+        border-top: 1px solid rgba(16, 12, 8, 0.1);
+        margin-top: 32px;
+    }
+
+    .activities-counter .single-activity{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .activities-counter .single-activity .icon svg{
+        fill: #63AB45;
+    }
+
+    .activities-counter .single-activity .content .number{
+        display: flex;
+        align-items: center;
+        font-weight: 700;
+        line-height: 1;
+        color: #100C08;
+        margin-bottom: 4px;
+    }
+
+    .activities-counter .single-activity .content .number h5{
+        font-size: 27px;
+        margin-bottom: 0;
+        line-height: 1;
+        color: #100C08;
+    }
+
+    .activities-counter .single-activity .content .number span{
+        font-size: 27px;
+        display: inline-block;
+        line-height: 1;
+    }
+
+    .activities-counter .single-activity .content p{
+        margin-bottom: 0;
+        color: #787878;
+        line-height: 22px;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .activities-counter .divider{
+        position: relative;
+    }
+  }
+
+
+  .footer-section{
+    background-image: url('img/footer-bg.png'), linear-gradient(180deg, #1d231f 0%, #1d231f 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    padding: 100px 0px 0px;
+  }
+
+  .footer-section .footer-top .footer-widget .footer-logo{
+    margin-bottom: 20px;
+  }
+
+  .footer-section .footer-top .footer-widget h3 {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.6;
+    text-transform: capitalize;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.footer-section .footer-top .footer-widget h3 span {
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.footer-section .footer-top .footer-widget .widget-title {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 20px;
+}
+
+.footer-section .footer-top .footer-widget .widget-title h5 {
+    color: rgba(255, 255, 255, 0.8);
+    
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0.66px;
+    margin-bottom: 0px;
+}
+
+.footer-section .footer-top .footer-widget .widget-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-section .footer-top .footer-widget .widget-list li {
+    margin-bottom: 10px;
+    transition: 0.5s;
+}
+
+.footer-section .footer-top .footer-widget .widget-list li a {
+    color: rgba(255, 255, 255, 0.6);
+    
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0.32px;
+    transition: 0.5s;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.footer-section .footer-top .footer-widget .single-contact .widget-title {
+    margin-bottom: 15px;
+}
+
+.footer-section .footer-top .footer-widget .widget-title svg {
+    fill: #fbb03bcc;
+}
+
+.footer-section .footer-top .footer-widget .single-contact a {
+    color: rgba(255, 255, 255, 0.6);
+    
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0.48px;
+    transition: 0.5s;
+}
+
+.footer-section .footer-top .footer-widget p {
+    color: rgba(255, 255, 255, 0.5);
+    
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    margin-bottom: 35px;
+}
+
+.footer-section .footer-top .footer-widget .payment-partner .icons ul {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-section .footer-top .footer-widget .payment-partner .icons ul li img {
+    border-radius: 4px;
+}
+
+.mb-35 {
+    margin-bottom: 35px;
+}
+
+.footer-section .footer-bottom{
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px 0;
+}
+
+.footer-section .footer-bottom p {
+    color: rgba(255, 255, 255, 0.5);
+    
+    font-size: 14px;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 0.42px;
+    margin-bottom: 0;
+}
+
+.footer-section .footer-bottom p a {
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: underline;
+    transition: 0.5s;
+}
+
+.footer-section .footer-top {
+    padding-bottom: 100px;
+}
